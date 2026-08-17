@@ -1,0 +1,32 @@
+# OS junk
+.DS_Store
+._*
+Thumbs.db
+
+# Office lock files
+~$*.docx
+~$*.pptx
+~$*.xlsx
+
+# Secrets / local config
+.env
+.env.*
+!.env.example
+
+# CONFIDENTIAL — assessment papers and answer keys are trainer-only
+# and must never be published to a public repository.
+assessment/
+reference/tms/
+
+# Build scratch
+*.tmp
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Archived superseded courseware versions
+courseware/archive/
+
+# Reference material (third-party PDFs/PPTX, not ours to redistribute)
+reference/
