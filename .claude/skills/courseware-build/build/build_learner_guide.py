@@ -13,7 +13,7 @@ Plan and the activities/ folder.
 """
 import os, sys
 from docx import Document
-from docx.shared import Pt, RGBColor
+from docx.shared import Pt, RGBColor, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
@@ -890,11 +890,15 @@ for kind, *rest in B:
         for x in rest[0]:
             doc.add_paragraph(x, style="List Bullet")
     elif kind == "numbered":
-        for x in rest[0]:
-            doc.add_paragraph(x, style="List Number")
+        for i, x in enumerate(rest[0], 1):
+            para = doc.add_paragraph(); para.paragraph_format.left_indent = Inches(0.3)
+            r = para.add_run(f"{i}. "); r.bold = True
+            para.add_run(x)
     elif kind == "steps":
         for i, (instr, cmd) in enumerate(rest[0], 1):
-            para = doc.add_paragraph(style="List Number"); para.add_run(instr)
+            para = doc.add_paragraph(); para.paragraph_format.left_indent = Inches(0.3)
+            r = para.add_run(f"{i}. "); r.bold = True
+            para.add_run(instr)
             if cmd:
                 cp = doc.add_paragraph()
                 r = cp.add_run(cmd); r.font.name = "Consolas"; r.font.size = Pt(9.5)
@@ -912,7 +916,7 @@ for kind, *rest in B:
     elif kind == "img":
         path = os.path.join(IMGDIR, rest[0])
         if os.path.exists(path):
-            doc.add_picture(path, width=prodoc.Inches(6.0) if hasattr(prodoc, "Inches") else None)
+            doc.add_picture(path, width=Inches(6.1))
             doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
             if rest[1]:
                 cap = doc.add_paragraph()
