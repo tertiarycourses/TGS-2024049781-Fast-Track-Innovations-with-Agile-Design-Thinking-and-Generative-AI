@@ -167,9 +167,9 @@ def dt_five_stages():
             _arrow(ax, x + w + 0.06, y + 0.78, x + w + gap - 0.06, y + 0.78, color=LINE, lw=2.6)
         x += w + gap
 
-    ax.annotate("", xy=(1.35, 1.42), xytext=(11.3, 1.42),
+    ax.annotate("", xy=(1.35, 1.30), xytext=(11.3, 1.30),
                 arrowprops=dict(arrowstyle="-|>", color=GREY, lw=1.6,
-                                connectionstyle="arc3,rad=0.28", linestyle="--"))
+                                connectionstyle="arc3,rad=-0.26", linestyle="--"))
     ax.text(6.3, 0.38, "Iterate — the loop is non-linear; any test can send you back to empathise.",
             ha="center", fontsize=10.4, color=GREY, style="italic")
     ax.text(6.3, 3.92, "THE FIVE STAGES OF DESIGN THINKING", ha="center",
@@ -459,11 +459,13 @@ def scrum_loop():
 
     for x1, x2 in [(2.47, 3.03), (5.17, 5.73), (9.07, 9.63)]:
         _arrow(ax, x1, 2.68, x2, 2.68, color=GREY, lw=2.0)
-    ax.annotate("", xy=(1.4, 1.98), xytext=(10.75, 1.98),
+    # retrospective feedback arc — routed BELOW the row so it never crosses a label
+    ax.annotate("", xy=(1.4, 1.55), xytext=(10.75, 1.55),
                 arrowprops=dict(arrowstyle="-|>", color=GREY, lw=1.8,
-                                connectionstyle="arc3,rad=0.22", linestyle="--"))
-    ax.text(6.1, 0.72, "Retrospective feeds the next sprint — inspect and adapt",
-            ha="center", fontsize=10.2, color=GREY, style="italic")
+                                connectionstyle="arc3,rad=-0.30", linestyle="--"))
+    ax.text(6.1, 0.52, "Retrospective feeds the next sprint — inspect and adapt",
+            ha="center", fontsize=10.2, color=GREY, style="italic",
+            bbox=dict(facecolor="white", edgecolor="none", pad=2.5))
     ax.text(6.1, 4.35, "THE SCRUM LOOP", ha="center", fontsize=12.8,
             fontweight="bold", color=INK)
     return _save(fig, "scrum-loop.png")
