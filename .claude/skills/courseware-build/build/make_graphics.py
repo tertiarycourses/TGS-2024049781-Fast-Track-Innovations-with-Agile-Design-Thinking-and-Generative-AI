@@ -182,7 +182,7 @@ def dual_track():
     fig, ax = _ax(12.4, 5.4)
     ax.set_xlim(0, 12.4); ax.set_ylim(0, 5.4)
 
-    ax.add_patch(FancyBboxPatch((0.3, 3.05), 11.8, 1.85,
+    ax.add_patch(FancyBboxPatch((0.3, 2.98), 11.8, 1.92,
                  boxstyle="round,pad=0.02,rounding_size=0.06",
                  facecolor=BLUE, alpha=0.07, edgecolor=BLUE, linewidth=2))
     ax.add_patch(FancyBboxPatch((0.3, 0.62), 11.8, 1.85,
@@ -210,8 +210,9 @@ def dual_track():
     for i, x in enumerate([2.4, 4.9, 7.4]):
         _arrow(ax, x + 1.02, 1.21, x + 1.48, 1.21, color=VIOLET, lw=1.8)
 
+    # feed arrows start below the caption baseline (captions sit at y = 3.12)
     for x in [5.8, 7.75, 9.9]:
-        _arrow(ax, x, 3.30, x - 0.35, 1.68, color=TEAL, lw=1.9, ls=(0, (4, 2)))
+        _arrow(ax, x, 2.92, x - 0.35, 1.68, color=TEAL, lw=1.9, ls=(0, (4, 2)))
     ax.text(11.55, 2.62, "validated\nbacklog items", fontsize=9.4, color=TEAL,
             ha="center", va="center", fontweight="bold")
 
