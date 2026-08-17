@@ -14,15 +14,12 @@ DOMAIN2 = [
         objective="LO2 · A3 · A5 — Synthesise information from different sources and stakeholders to fully understand end-user needs.",
         duration=50,
         case="GE Healthcare's MRI scanners were technically excellent, but designer Doug Dietz watched a small child "
-             "cry with terror in front of one of his own machines. He learned that up to 80% of paediatric patients "
-             "had to be sedated to complete a scan — which meant an anaesthetist on standby, longer slots, higher "
-             "cost and real clinical risk. The engineering brief would have been 'make the scanner quieter and "
-             "faster'. Dietz reframed it: the problem was not the machine's noise, it was a terrifying experience "
+             "cry with terror in front of one of his own machines. Up to 80% of paediatric patients had to be sedated to complete a scan — meaning an "
+             "anaesthetist on standby, longer slots, higher cost and real clinical risk. The engineering brief would have been 'make the scanner quieter'. Dietz reframed it: the problem was not the machine's noise, it was a terrifying experience "
              "for a frightened child. The team painted the scanner rooms as pirate ships, jungles and space "
              "adventures, and trained operators to narrate the scan as an adventure — 'hold very still while the "
-             "ship goes through the asteroid field'. Sedation rates for paediatric patients dropped dramatically "
-             "(reported as low as around 10% in redesigned suites), patient satisfaction rose sharply, and throughput "
-             "improved. Not one component of the scanner's imaging technology was changed.",
+             "ship goes through the asteroid field'. Sedation rates dropped dramatically (reported as low as around 10% in "
+             "redesigned suites) and patient satisfaction rose sharply. Not one component of the scanner's imaging technology was changed.",
         scenario="You work for a Singapore polyclinic group. Elderly patients frequently miss or abandon their health "
                  "screening appointments. The operations team's proposed solution is an SMS reminder system with a "
                  "confirm button. Screening uptake has not moved in two years despite three reminder revamps.",
@@ -71,9 +68,8 @@ DOMAIN2 = [
         case="In 1999, ABC's Nightline gave the design firm IDEO five days to redesign the supermarket shopping cart "
              "on camera. The team did not start by designing. They went out and observed shoppers, interviewed store "
              "managers about theft and maintenance, and talked to a child-safety expert. They then ran structured "
-             "brainstorms under explicit rules — defer judgement, encourage wild ideas, build on the ideas of others, "
-             "go for quantity, stay focused, one conversation at a time, be visual — and generated a large volume of "
-             "concepts before converging. The result was a modular cart with detachable hand baskets, a child seat "
+             "brainstorms under explicit rules — defer judgement, encourage wild ideas, build on others' ideas, "
+             "go for quantity, be visual — and generated a large volume of concepts before converging. The result was a modular cart with detachable hand baskets, a child seat "
              "designed for safety, and a scanning system that skipped the checkout queue. Crucially it was never "
              "meant for mass production; it was a provocation that demonstrated the process. The famous rule from "
              "that studio: separate idea generation from idea evaluation, because judging while generating kills the "
@@ -123,11 +119,10 @@ DOMAIN2 = [
         title="Rapid Prototyping with AI — From Concept to Testable Artefact in One Hour",
         objective="LO2 · LO4 · A4 — Prototyping with AI-driven tools: rapid development and feedback.",
         duration=50,
-        case="A hospital innovation team in Singapore needed to test whether a self-service kiosk would reduce queue "
-             "times at a specialist outpatient clinic. The traditional route — a scoped software build — would have "
-             "taken a quarter and a budget approval. Instead the team used a GenAI tool to draft the screen copy and "
-             "flow, printed the screens on paper, and ran a 'Wizard of Oz' test in the clinic corridor: a staff "
-             "member sat behind a curtain and swapped the paper screens by hand while real patients used it. Within "
+        case="A Singapore hospital team needed to test whether a self-service kiosk would cut queue times "
+             "at an outpatient clinic. A scoped software build would have taken a quarter and a budget. Instead the team used a GenAI tool to draft the screen copy and flow, printed the "
+             "screens on paper, and ran a 'Wizard of Oz' test in the clinic corridor — a staff member "
+             "behind a curtain swapped the paper screens by hand while real patients used it. Within "
              "two days they learned that elderly patients did not fail at the touchscreen — they abandoned at the "
              "point where the kiosk asked for an NRIC, because they were not sure whether it was safe to enter it in "
              "public view. That single insight redirected the entire design, and it cost nothing but paper and two "

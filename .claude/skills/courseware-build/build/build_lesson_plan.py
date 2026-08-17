@@ -92,11 +92,9 @@ SCHEDULE = {
      "Topic 4 — Scaling and Sustaining Innovations: the three levers that scale innovation; culture and the four principles; stakeholder buy-in; resource management with AI; sensemaking; systems thinking and feedback loops; metrics and KPIs."),
     ("16:45", "17:45", 60, "activity",
      "Hands-on case studies: " + act_titles([10, 11, 12])),
-    ("17:45", "18:00", 15, "recap",
-     "Course revision, Q&A, mandatory TRAQOM course feedback survey and Assessment digital attendance"),
-    ("18:00", "18:15", 15, "assess", "Briefing for Assessment"),
-    ("18:15", "18:30", 15, "assess",
-     "Final Assessment begins — Written Assessment (WA, SAQ) 1 hour then Case Study (CS) 1 hour, both open book. Learners submit on the LMS and sign the Assessment Summary Record."),
+    ("17:45", "18:00", 15, "recap", "Course revision and Q&A"),
+    ("18:00", "18:30", 30, "assess",
+     "Briefing for Assessment, mandatory TRAQOM survey and Assessment digital attendance. End of the 8 instructional hours."),
  ]),
 }
 
@@ -131,7 +129,7 @@ H("Course Information", 1)
 info = [("Course Title", C.TITLE),
         ("WSQ Course Reference", C.COURSE_CODE),
         ("Training Provider", C.ORG + "  (" + C.UEN.replace('UEN: ', 'UEN ') + ")"),
-        ("Duration", "2 days · 8 training hours per day (16 hours) + 2 hours assessment"),
+        ("Duration", "2 days · 8 training hours per day (16 instructional hours), plus a separate 2-hour assessment session"),
         ("Daily Timing", "9:30 am – 6:30 pm (1-hour lunch; tea breaks counted within training time)"),
         ("Mode", "Instructor-led, case-study based, with collaborative online ed-tools"),
         ("Skills Framework", f"{C.TSC_TITLE} ({C.TSC_CODE})"),
@@ -181,7 +179,7 @@ for m in [
 H("Assessment", 1)
 for a in [C.ASSESSMENT["written"], C.ASSESSMENT["practical"],
           "Format: Open Book — course slides, Learner Guide, activity briefs and approved materials only.",
-          "The final assessment is conducted at the end of Day 2.",
+          "The final assessment is conducted as a separate session at the end of Day 2, outside the 16 instructional hours: WA (0.5 h) then CS (1 h).",
           "Learners are assessed as Competent (C) or Not Yet Competent (NYC) on each instrument.",
           C.ASSESSMENT["note"]]:
     p = doc.add_paragraph(style="List Bullet"); p.add_run(a).font.size = Pt(10.5)
@@ -223,6 +221,33 @@ for day, (theme, rows) in SCHEDULE.items():
     r = p.add_run(f"Total training time: {training} minutes ({training // 60} hours).")
     r.italic = True; r.font.size = Pt(9.5); r.font.color.rgb = GREY
     assert training == 480, f"Day {day} training minutes = {training}, expected 480"
+
+H("Assessment Session (conducted separately, after the 16 instructional hours)", 1)
+doc.add_paragraph(
+    "The 2-hour assessment is scheduled as a separate session at the end of Day 2 and is NOT counted "
+    "within the 16 instructional hours. Learners who have met the 75% attendance requirement sit both "
+    "instruments in the order below.")
+ast_ = doc.add_table(rows=0, cols=3); ast_.style = "Table Grid"
+hdr = ast_.add_row().cells
+for i, htext in enumerate(["Duration", "Instrument", "Details"]):
+    set_cell(hdr[i], htext, bold=True, size=10, color=RGBColor(0xFF, 0xFF, 0xFF), fill=HEADER_FILL)
+for dur, inst, det in [
+    ("15 min", "Briefing for Assessment",
+     "Assessment rules, materials permitted, and the appeal process."),
+    ("0.5 hour", "Written Assessment (WA) — Short-Answer Questions (SAQ)",
+     "6 open-ended knowledge questions covering K1–K5. Open book."),
+    ("1 hour", "Case Study (CS)",
+     "1 scenario with 4 tasks covering A1–A7. Open book."),
+    ("15 min", "Submission and records",
+     "Learners upload answers to the LMS and sign the Assessment Summary Record."),
+]:
+    cells = ast_.add_row().cells
+    set_cell(cells[0], dur, bold=True, size=9.5, fill=ASSESS_FILL)
+    set_cell(cells[1], inst, bold=True, size=9.5, fill=ASSESS_FILL)
+    set_cell(cells[2], det, size=9.5)
+for row in ast_.rows:
+    row.cells[0].width = Inches(0.9); row.cells[1].width = Inches(2.6); row.cells[2].width = Inches(3.3)
+doc.add_paragraph("")
 
 H("Activity Reference (aligned to topics and learning outcomes)", 1)
 tt = doc.add_table(rows=0, cols=4); tt.style = "Table Grid"

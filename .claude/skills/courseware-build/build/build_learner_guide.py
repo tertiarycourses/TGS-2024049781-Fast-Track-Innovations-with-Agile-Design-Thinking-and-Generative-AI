@@ -668,7 +668,7 @@ for a in ACT:
 
 # ================================================================= ASSESSMENT
 h1("Preparing for the Assessment")
-p("The final assessment has two instruments, both open book and both conducted at the end of Day 2.")
+p("The final assessment has two instruments, both open book, conducted as a separate session at the end of Day 2 outside the 16 instructional hours: the Written Assessment (0.5 hour) followed by the Case Study (1 hour).")
 bullets([C.ASSESSMENT["written"], C.ASSESSMENT["practical"],
          "You may use this Learner Guide, the course slides, your activity briefs and any approved material.",
          "You are assessed as Competent (C) or Not Yet Competent (NYC) on each instrument.",
@@ -693,7 +693,7 @@ h3("Assessment day flow")
 numbered([
     "Complete the mandatory TRAQOM course feedback survey on the LMS.",
     "Take the Assessment digital attendance by scanning the SSG QR code.",
-    "Sit the Written Assessment (SAQ), then the Case Study — one hour each, open book.",
+    "Sit the Written Assessment (SAQ) — 0.5 hour — then the Case Study — 1 hour. Both are open book.",
     "Submit your completed answers on the LMS at https://lms-tms.tertiaryinfotech.com.",
     "Sign the Assessment Summary Record.",
 ])

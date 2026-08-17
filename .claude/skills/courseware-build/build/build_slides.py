@@ -102,21 +102,16 @@ tile_grid("Skills Framework Alignment", [
     ("A7 · K1–K5", "Lead design thinking projects; trends, innovation management, growth drivers, resources, PM tools.")],
     kicker="SKILLS FRAMEWORK  ·  TSC", cols=2, size=13.5, accent=VIOLET)
 
-two_col("Lesson Plan — 2 Days, 8 hours/day", [
-    (f"Day 1 — {C.DAY_THEMES[1]}", 0),
-    ("Digital Attendance (AM) · Introductions · Learning Outcomes", 1),
-    ("Topic 1: Foundations of DT, Agile and GenAI (Activities 1–3)", 1),
-    ("Lunch Break · Digital Attendance (PM)", 1),
-    ("Topic 2: Problem Framing and Ideation (Activities 4–6)", 1),
-    ("End of Day 1", 1)],
-    [(f"Day 2 — {C.DAY_THEMES[2]}", 0),
-     ("Digital Attendance (AM)", 1),
-     ("Topic 3: Agile Development and AI (Activities 7–9)", 1),
-     ("Lunch Break · Digital Attendance (PM)", 1),
-     ("Topic 4: Scaling and Sustaining Innovations (Activities 10–12)", 1),
-     ("Revision · TRAQOM Survey · Digital Attendance (Assessment)", 1),
-     ("Final Assessment (WA + Case Study)", 1)],
-    kicker="SCHEDULE", lhead="Day 1", rhead="Day 2")
+tile_grid("Lesson Plan — 2 Days, 8 Training Hours per Day", [
+    (f"Day 1 AM — {C.DAY_THEMES[1].split(',')[0]}",
+     "Digital attendance · introductions · learning outcomes · Topic 1: Foundations of Design Thinking, Agile and GenAI · Activity 1."),
+    ("Day 1 PM — Problem Framing and Ideation",
+     "Digital attendance · Activities 2 and 3 · Topic 2: framing, empathy maps, HMW and ideation · Activities 4 and 5."),
+    ("Day 2 AM — Agile Delivery",
+     "Digital attendance · Activity 6 · Topic 3: Scrum, dual-track agile and the decomposition ladder · Activity 7."),
+    ("Day 2 PM — Scaling and Assessment",
+     "Digital attendance · Activities 8 and 9 · Topic 4: scaling, systems thinking and metrics · Activities 10–12 · revision, TRAQOM and the assessment session.")],
+    kicker="SCHEDULE  ·  9:30 AM – 6:30 PM", cols=1, size=14)
 
 tile_grid("Learning Outcomes", [
     ("LO1 · Integrate DT + Agile + GenAI", "Integrate design thinking methodologies and agile principles to drive organisational innovation using generative AI."),
@@ -171,7 +166,7 @@ tile_grid("Briefing for Assessment", [
     kicker="BEFORE YOU START", cols=2, size=14, accent=AMBER)
 
 tile_grid("Assessment", [
-    ("Written Assessment (WA)", "Short-Answer Questions (SAQ) · 1 hour · open book. Tests the underpinning knowledge taught in the slides."),
+    ("Written Assessment (WA)", "Short-Answer Questions (SAQ) · 0.5 hour · open book. Tests the underpinning knowledge taught in the slides."),
     ("Case Study (CS)", "A scenario-based innovation case · 1 hour · open book. Tests applied judgement across all four topics."),
     ("Open book", "You may use the course slides, the Learner Guide, your activity briefs and approved materials only."),
     ("Eligibility", "A minimum of 75% attendance is required to be eligible for assessment and funding."),
@@ -182,7 +177,7 @@ tile_grid("Assessment", [
 process_map("Assessment Flow", [
     ("TRAQOM survey", "Scan the QR code on the LMS"),
     ("Digital attendance", "Scan the SSG assessment QR"),
-    ("Sit WA then CS", "Open book · 1 hour each"),
+    ("Sit WA then CS", "WA 0.5 h then CS 1 h · open book"),
     ("Submit on the LMS", "Upload your completed answers"),
     ("Sign the record", "Sign the Assessment Summary Record")],
     kicker="ON ASSESSMENT DAY", color=BLUE,
@@ -647,7 +642,7 @@ content("Support", [
 
 # --- mandatory assessment admin block, repeated at the END
 tile_grid("Assessment", [
-    ("Written Assessment (SAQ)", "1 hour · open book · short-answer questions on the underpinning knowledge."),
+    ("Written Assessment (SAQ)", "0.5 hour · open book · short-answer questions on the underpinning knowledge."),
     ("Case Study (CS)", "1 hour · open book · a scenario-based innovation case across all four topics."),
     ("Digital attendance", "Remember to take the Assessment digital attendance (TRAQOM) before you start."),
     ("Submit on the LMS", "Upload your completed answers at https://lms-tms.tertiaryinfotech.com/")],
@@ -656,7 +651,7 @@ tile_grid("Assessment", [
 process_map("Assessment Flow", [
     ("TRAQOM survey", "Scan the QR code on the LMS"),
     ("Digital attendance", "Scan the SSG assessment QR"),
-    ("Sit WA then CS", "Open book · 1 hour each"),
+    ("Sit WA then CS", "WA 0.5 h then CS 1 h · open book"),
     ("Submit on the LMS", "Upload your completed answers"),
     ("Sign the record", "Sign the Assessment Summary Record")],
     kicker="ON ASSESSMENT DAY", color=BLUE,

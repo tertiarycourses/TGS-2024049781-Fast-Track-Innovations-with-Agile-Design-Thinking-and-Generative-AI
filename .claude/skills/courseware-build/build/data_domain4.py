@@ -66,9 +66,9 @@ DOMAIN4 = [
         title="Boeing 737 MAX — Systems Thinking and the Cost of Local Optimisation",
         objective="LO4 · K2 · K4 — Systems thinking, feedback loops and causality; concept and principles of resource management.",
         duration=50,
-        case="Boeing needed a competitive response to the Airbus A320neo quickly and cheaply. Fitting larger, more "
-             "efficient engines to the existing 737 airframe changed the aircraft's pitch behaviour, so Boeing added "
-             "MCAS, a software system that automatically pushed the nose down. Each decision was locally rational: "
+        case="Boeing needed a fast, cheap answer to the Airbus A320neo. Fitting larger engines to the existing "
+             "737 airframe changed the aircraft's pitch behaviour, so Boeing added MCAS, software that "
+             "automatically pushed the nose down. Each decision was locally rational: "
              "reuse the airframe to save cost and time; solve the aerodynamic consequence in software; keep the "
              "aircraft under the same type rating so airlines would not need expensive pilot simulator training; "
              "therefore minimise what pilots were told about MCAS. Two crashes killed 346 people and the fleet was "

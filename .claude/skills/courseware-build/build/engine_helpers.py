@@ -368,10 +368,11 @@ def process_map(title,stages,kicker=None,color=BLUE,synthesis=None,animate=True)
         txt(s,x+Inches(0.14),int(y+Inches(1.06)),cw-Inches(0.28),Inches(0.94),
             [[(lbl,lsz,INK,True)]],align=PP_ALIGN.CENTER,anchor=MSO_ANCHOR.MIDDLE,space=0)
         if detail:
-            # ONE line only, sized to the card — a 2-line caption overflows the card bottom
-            det=_ellipsis(detail,26)
-            txt(s,x+Inches(0.1),int(y+ch-Inches(0.52)),cw-Inches(0.2),Inches(0.38),
-                [[(det,9,GREY,False)]],align=PP_ALIGN.CENTER,anchor=MSO_ANCHOR.MIDDLE,space=0)
+            # TWO lines available; shrink the type rather than truncate the sentence
+            det=_ellipsis(detail,60)
+            dsz=9 if len(det)<=30 else (8.5 if len(det)<=46 else 8)
+            txt(s,x+Inches(0.08),int(y+ch-Inches(0.80)),cw-Inches(0.16),Inches(0.72),
+                [[(det,dsz,GREY,False)]],align=PP_ALIGN.CENTER,anchor=MSO_ANCHOR.MIDDLE,space=0)
         spids.append(box.shape_id)
         if i<n-1:   # REAL connector in the gap, with an arrowhead
             cy=int(y+ch/2)
@@ -694,11 +695,11 @@ def case_slide(tag,title,case,scenario,kicker,accent=VIOLET):
     txt(s,Inches(1.05),Inches(1.99),Inches(11.2),Inches(0.34),[[(tag,12.5,WHITE,True)]])
     rect(s,Inches(0.85),Inches(2.45),Inches(7.15),Inches(3.35),LIGHT)
     txt(s,Inches(1.08),Inches(2.62),Inches(6.7),Inches(0.34),[[("THE REAL CASE",12,accent,True)]])
-    txt(s,Inches(1.08),Inches(3.0),Inches(6.72),Inches(2.7),[[(_ellipsis(case,660),11.5,INK,False)]])
+    txt(s,Inches(1.08),Inches(3.0),Inches(6.72),Inches(2.7),[[(_ellipsis(case,900),11.5,INK,False)]])
     rect(s,Inches(8.35),Inches(2.45),Inches(4.13),Inches(3.35),WHITE,line=TEAL)
     rect(s,Inches(8.35),Inches(2.45),Inches(4.13),Inches(0.09),TEAL)
     txt(s,Inches(8.58),Inches(2.66),Inches(3.7),Inches(0.34),[[("YOUR SCENARIO",12,TEAL,True)]])
-    txt(s,Inches(8.58),Inches(3.04),Inches(3.72),Inches(2.6),[[(_ellipsis(scenario,420),11.5,INK,False)]])
+    txt(s,Inches(8.58),Inches(3.04),Inches(3.72),Inches(2.6),[[(_ellipsis(scenario,520),11.5,INK,False)]])
     rect(s,Inches(0.85),Inches(5.95),Inches(11.63),Inches(0.66),LIGHT)
     rect(s,Inches(0.85),Inches(5.95),Inches(0.09),Inches(0.66),AMBER)
     txt(s,Inches(1.12),Inches(6.06),Inches(11.2),Inches(0.46),
@@ -729,7 +730,7 @@ def debrief_slide(title,text,kicker,accent=TEAL):
     rect(s,Inches(0.85),Inches(1.95),Inches(11.63),Inches(4.75),LIGHT)
     rect(s,Inches(0.85),Inches(1.95),Inches(0.11),Inches(4.75),accent)
     txt(s,Inches(1.25),Inches(2.2),Inches(11.0),Inches(0.4),[[("WHAT THE ROOM SHOULD CONCLUDE",12.5,accent,True)]])
-    txt(s,Inches(1.25),Inches(2.7),Inches(11.02),Inches(3.75),[[(_ellipsis(text,980),13,INK,False)]])
+    txt(s,Inches(1.25),Inches(2.7),Inches(11.02),Inches(3.75),[[(_ellipsis(text,1250),13,INK,False)]])
     footer(s); return s
 
 def edtool_slide(title,name,url,desc,steps,kicker,accent=TEAL):

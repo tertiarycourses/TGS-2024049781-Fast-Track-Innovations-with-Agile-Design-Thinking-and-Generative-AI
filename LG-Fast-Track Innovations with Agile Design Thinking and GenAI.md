@@ -876,7 +876,7 @@ LO2 · A3 · A5 — Synthesise information from different sources and stakeholde
 
 **The real case**
 
-GE Healthcare's MRI scanners were technically excellent, but designer Doug Dietz watched a small child cry with terror in front of one of his own machines. He learned that up to 80% of paediatric patients had to be sedated to complete a scan — which meant an anaesthetist on standby, longer slots, higher cost and real clinical risk. The engineering brief would have been 'make the scanner quieter and faster'. Dietz reframed it: the problem was not the machine's noise, it was a terrifying experience for a frightened child. The team painted the scanner rooms as pirate ships, jungles and space adventures, and trained operators to narrate the scan as an adventure — 'hold very still while the ship goes through the asteroid field'. Sedation rates for paediatric patients dropped dramatically (reported as low as around 10% in redesigned suites), patient satisfaction rose sharply, and throughput improved. Not one component of the scanner's imaging technology was changed.
+GE Healthcare's MRI scanners were technically excellent, but designer Doug Dietz watched a small child cry with terror in front of one of his own machines. Up to 80% of paediatric patients had to be sedated to complete a scan — meaning an anaesthetist on standby, longer slots, higher cost and real clinical risk. The engineering brief would have been 'make the scanner quieter'. Dietz reframed it: the problem was not the machine's noise, it was a terrifying experience for a frightened child. The team painted the scanner rooms as pirate ships, jungles and space adventures, and trained operators to narrate the scan as an adventure — 'hold very still while the ship goes through the asteroid field'. Sedation rates dropped dramatically (reported as low as around 10% in redesigned suites) and patient satisfaction rose sharply. Not one component of the scanner's imaging technology was changed.
 
 **Your scenario**
 
@@ -930,7 +930,7 @@ LO2 · LO4 · A3 — Ideation and brainstorming techniques enhanced by generativ
 
 **The real case**
 
-In 1999, ABC's Nightline gave the design firm IDEO five days to redesign the supermarket shopping cart on camera. The team did not start by designing. They went out and observed shoppers, interviewed store managers about theft and maintenance, and talked to a child-safety expert. They then ran structured brainstorms under explicit rules — defer judgement, encourage wild ideas, build on the ideas of others, go for quantity, stay focused, one conversation at a time, be visual — and generated a large volume of concepts before converging. The result was a modular cart with detachable hand baskets, a child seat designed for safety, and a scanning system that skipped the checkout queue. Crucially it was never meant for mass production; it was a provocation that demonstrated the process. The famous rule from that studio: separate idea generation from idea evaluation, because judging while generating kills the unusual ideas first.
+In 1999, ABC's Nightline gave the design firm IDEO five days to redesign the supermarket shopping cart on camera. The team did not start by designing. They went out and observed shoppers, interviewed store managers about theft and maintenance, and talked to a child-safety expert. They then ran structured brainstorms under explicit rules — defer judgement, encourage wild ideas, build on others' ideas, go for quantity, be visual — and generated a large volume of concepts before converging. The result was a modular cart with detachable hand baskets, a child seat designed for safety, and a scanning system that skipped the checkout queue. Crucially it was never meant for mass production; it was a provocation that demonstrated the process. The famous rule from that studio: separate idea generation from idea evaluation, because judging while generating kills the unusual ideas first.
 
 **Your scenario**
 
@@ -984,7 +984,7 @@ LO2 · LO4 · A4 — Prototyping with AI-driven tools: rapid development and fee
 
 **The real case**
 
-A hospital innovation team in Singapore needed to test whether a self-service kiosk would reduce queue times at a specialist outpatient clinic. The traditional route — a scoped software build — would have taken a quarter and a budget approval. Instead the team used a GenAI tool to draft the screen copy and flow, printed the screens on paper, and ran a 'Wizard of Oz' test in the clinic corridor: a staff member sat behind a curtain and swapped the paper screens by hand while real patients used it. Within two days they learned that elderly patients did not fail at the touchscreen — they abandoned at the point where the kiosk asked for an NRIC, because they were not sure whether it was safe to enter it in public view. That single insight redirected the entire design, and it cost nothing but paper and two afternoons. Had they built the software first, they would have discovered it after the budget was spent.
+A Singapore hospital team needed to test whether a self-service kiosk would cut queue times at an outpatient clinic. A scoped software build would have taken a quarter and a budget. Instead the team used a GenAI tool to draft the screen copy and flow, printed the screens on paper, and ran a 'Wizard of Oz' test in the clinic corridor — a staff member behind a curtain swapped the paper screens by hand while real patients used it. Within two days they learned that elderly patients did not fail at the touchscreen — they abandoned at the point where the kiosk asked for an NRIC, because they were not sure whether it was safe to enter it in public view. That single insight redirected the entire design, and it cost nothing but paper and two afternoons. Had they built the software first, they would have discovered it after the budget was spent.
 
 **Your scenario**
 
@@ -1252,7 +1252,7 @@ LO4 · K2 · K4 — Systems thinking, feedback loops and causality; concept and 
 
 **The real case**
 
-Boeing needed a competitive response to the Airbus A320neo quickly and cheaply. Fitting larger, more efficient engines to the existing 737 airframe changed the aircraft's pitch behaviour, so Boeing added MCAS, a software system that automatically pushed the nose down. Each decision was locally rational: reuse the airframe to save cost and time; solve the aerodynamic consequence in software; keep the aircraft under the same type rating so airlines would not need expensive pilot simulator training; therefore minimise what pilots were told about MCAS. Two crashes killed 346 people and the fleet was grounded worldwide for around 20 months. No single decision was insane in isolation. The system of decisions — commercial pressure, a reused airframe, a software patch, and a training omission driven by the commercial goal — was lethal. This is what a reinforcing feedback loop with no effective balancing loop looks like in practice.
+Boeing needed a fast, cheap answer to the Airbus A320neo. Fitting larger engines to the existing 737 airframe changed the aircraft's pitch behaviour, so Boeing added MCAS, software that automatically pushed the nose down. Each decision was locally rational: reuse the airframe to save cost and time; solve the aerodynamic consequence in software; keep the aircraft under the same type rating so airlines would not need expensive pilot simulator training; therefore minimise what pilots were told about MCAS. Two crashes killed 346 people and the fleet was grounded worldwide for around 20 months. No single decision was insane in isolation. The system of decisions — commercial pressure, a reused airframe, a software patch, and a training omission driven by the commercial goal — was lethal. This is what a reinforcing feedback loop with no effective balancing loop looks like in practice.
 
 **Your scenario**
 
@@ -1352,9 +1352,9 @@ Almost every group's first draft contains at least one activity metric — ideas
 
 ## Preparing for the Assessment
 
-The final assessment has two instruments, both open book and both conducted at the end of Day 2.
+The final assessment has two instruments, both open book, conducted as a separate session at the end of Day 2 outside the 16 instructional hours: the Written Assessment (0.5 hour) followed by the Case Study (1 hour).
 
-- Written Assessment (WA) — Short-Answer Questions (SAQ), 1 hour, open book.
+- Written Assessment (WA) — Short-Answer Questions (SAQ), 0.5 hour, open book.
 - Case Study (CS) — a scenario-based innovation case, 1 hour, open book.
 - You may use this Learner Guide, the course slides, your activity briefs and any approved material.
 - You are assessed as Competent (C) or Not Yet Competent (NYC) on each instrument.
@@ -1380,7 +1380,7 @@ The final assessment has two instruments, both open book and both conducted at t
 
 1. Complete the mandatory TRAQOM course feedback survey on the LMS.
 2. Take the Assessment digital attendance by scanning the SSG QR code.
-3. Sit the Written Assessment (SAQ), then the Case Study — one hour each, open book.
+3. Sit the Written Assessment (SAQ) — 0.5 hour — then the Case Study — 1 hour. Both are open book.
 4. Submit your completed answers on the LMS at https://lms-tms.tertiaryinfotech.com.
 5. Sign the Assessment Summary Record.
 

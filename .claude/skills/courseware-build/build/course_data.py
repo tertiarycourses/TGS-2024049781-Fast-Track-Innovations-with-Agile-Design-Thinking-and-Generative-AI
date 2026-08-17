@@ -142,7 +142,7 @@ DAY_THEMES = {
 
 # ------------------------------------------------------------------ assessment
 ASSESSMENT = dict(
-    written="Written Assessment (WA) — Short-Answer Questions (SAQ), 1 hour, open book.",
+    written="Written Assessment (WA) — Short-Answer Questions (SAQ), 0.5 hour, open book.",
     practical="Case Study (CS) — a scenario-based innovation case, 1 hour, open book.",
     note="A minimum of 75% attendance is required to be eligible for assessment and funding.",
 )
