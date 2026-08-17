@@ -423,6 +423,19 @@ def bullet(d, text, size=10.5):
     return p
 
 
+
+def hrule(d, after=8):
+    """A real paragraph bottom-border — replaces a run of underscores that wraps."""
+    from docx.oxml.ns import qn
+    from docx.oxml import OxmlElement
+    p = d.add_paragraph(); p.paragraph_format.space_after = Pt(after)
+    pPr = p._p.get_or_add_pPr()
+    bd = OxmlElement('w:pBdr'); bot = OxmlElement('w:bottom')
+    bot.set(qn('w:val'), 'single'); bot.set(qn('w:sz'), '6')
+    bot.set(qn('w:space'), '1'); bot.set(qn('w:color'), 'AAAAAA')
+    bd.append(bot); pPr.append(bd)
+    return p
+
 def cover(d, instrument):
     prodoc.add_cover_page(d, instrument, C.TITLE, C.VERSION.lstrip("v"),
                           org_logo=ORG_LOGO, course_logo=None, course_code=C.COURSE_CODE)
@@ -446,8 +459,7 @@ def candidate_block(d, instrument, duration_text):
         p = d.add_paragraph(style="List Number"); p.paragraph_format.space_after = Pt(3)
         r = p.add_run(t); r.font.size = Pt(11); r.font.name = "Arial"
     line(d, "", after=6)
-    line(d, "____________________________________________________________________________",
-         color=GREY, after=6)
+    hrule(d, after=6)
     line(d, "For Official Use Only", bold=True, after=6)
     line(d, "Grade: _____ (C / NYC)", after=6)
     line(d, "Assessor Name: _______________\t\tAssessor NRIC: _____________", after=6)
@@ -521,8 +533,7 @@ def build_cs_paper():
         line(d, para, after=8)
     line(d, "", after=4)
     for title, codes, mapping, reqs, _model in CS_TASKS:
-        line(d, "____________________________________________________________________________",
-             color=GREY, after=8)
+        hrule(d, after=8)
         line(d, f"{title}   ({codes})", bold=True, size=11.5, color=BRAND, after=4)
         line(d, mapping, italic=True, size=10, color=GREY, after=8)
         line(d, "Task Requirements:", bold=True, size=11, after=4)
@@ -563,8 +574,7 @@ def build_cs_answers():
         for m in model:
             bullet(d, m, size=10.5)
         line(d, "", after=14)
-    line(d, "____________________________________________________________________________",
-         color=GREY, after=6)
+    hrule(d, after=6)
     line(d, "Overall judgement", bold=True, size=12, color=BRAND, after=4)
     line(d, "The candidate is assessed Competent (C) where all four tasks are attempted and the "
             "responses demonstrate: reframing before solving; synthesis of quantitative and qualitative "
